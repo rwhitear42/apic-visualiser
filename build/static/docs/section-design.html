@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" id="styleguide">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Cisco UI Kit</title>
+
+        <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="assets/css/cui-styleguide.min.css">
+        <link rel="stylesheet" href="public/css/featherlight.min.css">
+        <link rel="stylesheet" href="public/js/highlight/styles/atom-one-light.css">
+        <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="public/js/styleguide.js"></script>
+        <script src="public/js/jquery-scrollto.js"></script>
+        <script src="public/js/clipboard.js"></script>
+        <script src="public/js/featherlight.min.js"></script>
+        <script src="public/js/Markdown.Converter.js"></script>
+        <script src="public/js/highlight/highlight.pack.js"></script>
+    </head>
+    <body class="cui cui--animated cui--headermargins cui--wide styleguide">
+        <div class="content-fluid">
+            <nav id="styleguideSidebar" class="sidebar sidebar--mini sidebar--indigo" role="navigation">
+                <div class="sidebar__header">
+                    <a id="sidebar-toggle" class="sidebar-toggle hidden-xs hidden-sm">
+                        <span class="icon-toggle-menu"></span>
+                    </a>
+                    <div class="sidebar__header-title">Cisco UI Kit</div>
+                </div>
+                <ul id="rootSidebar" data-kss-ref="Design">
+                    <li class="sidebar__item" id="section-gettingStarted">
+                        <a onclick="doNav('./index.html')" title="Getting Started">
+                            <span class="icon-home"></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Resources">
+                            <span class="icon-tools"></span>
+                            <span>Resources</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=f440dc5c-b623-4fdb-b5da-a455c5a1ac58" target="_blank">UI Kit Home Page</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/Wa4b9a3b71b87_4b16_88f1_7f66e71f0276/page/The%20UI%20Kit%20(Atlantic)%20-%20FAQs" target="_blank">UI Kit FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="For Designers">
+                            <span class="icon-draw"></span>
+                            <span>Files</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="public/documents/sketch/CiscoUI-Icons.sketch" download="public/documents/sketch/CiscoUI-Icons.sketch">Icons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/button.sketch" download="public/documents/sketch/button.sketch">Buttons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/checkbox.sketch" download="public/documents/sketch/checkbox.sketch">Checkboxes (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/radio.sketch" download="public/documents/sketch/radio.sketch">Radios (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/switch.sketch" download="public/documents/sketch/switch.sketch">Switches (Sketch)</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Older Versions">
+                            <span class="icon-history"></span>
+                            <span>Versions</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.3-official/" target="_blank">Version 1.3.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.2-official/" target="_blank">Version 1.3.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.2-official/" target="_blank">Version 1.2.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.0-official/" target="_blank">Version 1.2.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.1.0-official/" target="_blank">Version 1.1.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.5-official/" target="_blank">Version 1.0.5</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.1-official/" target="_blank">Version 1.0.1</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.0-official/" target="_blank">Version 1.0.0</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Examples">
+                            <span class="icon-applications"></span>
+                            <span>Examples</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item">
+                                <a href="assets/basic.html">Basic Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/list.html">List Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/standard.html">Standard Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/sidebar.html">Sidebar Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/wide.html">Wide Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/collage.html">Collage</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="rootDrawer" class="sidebar__drawer">
+                        <a tabindex="0" title="Pattern Library">
+                            <span class="icon-plugin"></span>
+                            <span>Patterns</span>
+
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="index.html">Home</a></li>
+                            <li class="sidebar__item"><a href="section-design.html#design-typography">Design</a></li>
+                            <li class="sidebar__item"><a href="section-primitives.html#primitives-blockquote">Primitives</a></li>
+                            <li class="sidebar__item"><a href="section-components.html#components-alert">Components</a></li>
+                            <li class="sidebar__item"><a href="section-layout.html#layout-footer">Layout</a></li>
+                            <li class="sidebar__item"><a href="section-utilities.html#utilities-helpers">Utilities</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <header id="styleguideHeader" class="header header--compressed">
+                    <div class="header-bar flex-center-sm container-fluid">
+                        <a id="mobile-sidebar-toggle" class="sidebar-toggle visible-xs visible-sm base-margin-right">
+                            <span class="icon-list-menu"></span>
+                        </a>
+                        <a class="header-bar__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <div class="header-bar__main hidden-xs hidden-sm">
+                            <div class="header-heading">
+                                <h1 class="page-title">Cisco UI Kit</h1>
+                            </div>
+                        </div>
+                        <div class="header-toolbar hidden-xs hidden-sm hidden-md">
+
+                            <div>
+                                <a href="index.html">Home</a>
+                                <a href="section-design.html#design-typography" class="base-margin-left">Design</a>
+                                <a href="section-primitives.html#primitives-blockquote" class="base-margin-left">Primitives</a>
+                                <a href="section-components.html#components-alert" class="base-margin-left">Components</a>
+                                <a href="section-layout.html#layout-footer" class="base-margin-left">Layout</a>
+                                <a href="section-utilities.html#utilities-helpers" class="base-margin-left">Utilities</a>
+
+                                <div class="dropdown dropdown--left dropdown--tail base-margin-left">
+                                    <a>Globals</a>
+                                    <div class="dropdown__menu">
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-animation" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Animations</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-headermargins" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Header Margins</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-spacing" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Compression</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-wide" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Wide View</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-sticky" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Sticky Header/Footer</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="content content--alt">
+
+
+                    <div id="design" class="hide">
+                        <a class="link invisible" href="#design">
+                            <span class="icon-link"></span>
+                        </a>
+                    </div>
+
+ 
+                    <div id="design-section">
+                        <div class="container-fluid">
+                            <div class="section">
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-3 col-xl-2">
+                                        <div class="panel panel--bordered-bottom panel--bordered-right panel--loose half-padding-left">
+                                            <h4 class="text-uppercase no-margin">Design</h4>
+                                        </div>
+                                        <ul id="styleguideTabs" class="tabs tabs--vertical">
+                                            <li class="tab" id="styleguideTabs-Typography"><a onclick="updateUrl('design-typography')" tabindex="0"><div class="tab__heading" title="Typography">Typography</div></a></li><li class="tab" id="styleguideTabs-Palette"><a onclick="updateUrl('design-palette')" tabindex="0"><div class="tab__heading" title="Palette">Palette</div></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-8 col-lg-9 col-xl-10">
+                                        <div id="styleguideTabs-content" class="tab-content">
+                    
+
+
+
+
+
+
+
+
+
+
+                                            <div id="styleguideTabs-Typography-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">typography</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Headings</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="row">
+    <div class="col-md-6">
+        <div class="section">
+            <h1>H1 Heading</h1>
+            <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+        </div>
+        <div class="section">
+            <h2>H2 Heading</h2>
+            <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+        </div>
+        <div class="section">
+            <h3>H3 Heading</h3>
+            <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="section">
+            <h4>H4 Heading</h4>
+            <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+        </div>
+        <div class="section">
+            <h5>H5 Heading</h5>
+            <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+        </div>
+        <div class="section">
+            <h6>H6 Heading</h6>
+            <p>Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.</p>
+        </div>
+     </div>
+ </div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;h1&gt;H1 Heading&lt;/h1&gt;
+            &lt;p&gt;Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;h2&gt;H2 Heading&lt;/h2&gt;
+            &lt;p&gt;Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;h3&gt;H3 Heading&lt;/h3&gt;
+            &lt;p&gt;Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;h4&gt;H4 Heading&lt;/h4&gt;
+            &lt;p&gt;Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;h5&gt;H5 Heading&lt;/h5&gt;
+            &lt;p&gt;Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;section&quot;&gt;
+            &lt;h6&gt;H6 Heading&lt;/h6&gt;
+            &lt;p&gt;Curabitur sit amet magna quam. Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nunc lobortis dui neque, quis accumsan dolor. Aenean aliquet dignissim semper.&lt;/p&gt;
+        &lt;/div&gt;
+     &lt;/div&gt;
+ &lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Display Headings</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <h1 class="display-0">Display Heading 0</h1>
+<h1 class="display-1">Display Heading 1</h1>
+<h1 class="display-2">Display Heading 2</h1>
+<h1 class="display-3">Display Heading 3</h1>
+<h1 class="display-4">Display Heading 4</h1>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;h1 class=&quot;display-0&quot;&gt;Display Heading 0&lt;/h1&gt;
+&lt;h1 class=&quot;display-1&quot;&gt;Display Heading 1&lt;/h1&gt;
+&lt;h1 class=&quot;display-2&quot;&gt;Display Heading 2&lt;/h1&gt;
+&lt;h1 class=&quot;display-3&quot;&gt;Display Heading 3&lt;/h1&gt;
+&lt;h1 class=&quot;display-4&quot;&gt;Display Heading 4&lt;/h1&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Subheadings</h3>
+
+
+
+                                                <div><blockquote>Lighten up your heading text by adding class <code>subheading</code> to any heading element.</blockquote></div>
+
+                                                <div class="section">
+                                                    <h1>Regular Heading</h1>
+<h2 class="subheading">Subheading</h2>
+<div class="subheader">Subtitle</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;h1&gt;Regular Heading&lt;/h1&gt;
+&lt;h2 class=&quot;subheading&quot;&gt;Subheading&lt;/h2&gt;
+&lt;div class=&quot;subheader&quot;&gt;Subtitle&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Paragraphs</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Filenames and URLs</h3>
+
+
+
+                                                <div><blockquote>Add the class <code>text-darkgreen</code> for filenames and URLs (which are not rendered as links).</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="section">
+    <h6>Filenames</h6>
+    <hr>
+    <div>
+        <div>AnyConnect Pre-Deployment Package (Linux 64-bit)</div>
+        <div class="text-darkgreen text-normal">anyconnect-linux64-4.5.02033-predeploy-k9.tar.gz</div>
+    </div>
+</div>
+<div class="section">
+    <h6>URLs</h6>
+    <hr>
+    <div>
+        <a href="https://www.cisco.com/c/en/us/support/security/asa-5500-series-next-generation-firewalls/tsd-products-support-series-home.html">Security - Cisco ASA 5500-X Series Firewalls</a>
+        <div>06 Aug 2016 - Find software and support documentation to design, install and upgrade, configure, and troubleshoot Cisco ASA 5500 Series Adaptive Security Appliances.</div>
+        <div class="text-darkgreen text-normal">https://www.cisco.com/c/en/us/support/security/asa-5500-series-next-generation-firewalls/tsd-products-support-series-home.html</div>
+    </div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;section&quot;&gt;
+    &lt;h6&gt;Filenames&lt;/h6&gt;
+    &lt;hr&gt;
+    &lt;div&gt;
+        &lt;div&gt;AnyConnect Pre-Deployment Package (Linux 64-bit)&lt;/div&gt;
+        &lt;div class=&quot;text-darkgreen text-normal&quot;&gt;anyconnect-linux64-4.5.02033-predeploy-k9.tar.gz&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot;&gt;
+    &lt;h6&gt;URLs&lt;/h6&gt;
+    &lt;hr&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.cisco.com/c/en/us/support/security/asa-5500-series-next-generation-firewalls/tsd-products-support-series-home.html&quot;&gt;Security - Cisco ASA 5500-X Series Firewalls&lt;/a&gt;
+        &lt;div&gt;06 Aug 2016 - Find software and support documentation to design, install and upgrade, configure, and troubleshoot Cisco ASA 5500 Series Adaptive Security Appliances.&lt;/div&gt;
+        &lt;div class=&quot;text-darkgreen text-normal&quot;&gt;https://www.cisco.com/c/en/us/support/security/asa-5500-series-next-generation-firewalls/tsd-products-support-series-home.html&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                </div>
+
+
+                                            <div id="styleguideTabs-Palette-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">palette</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="row base-margin-bottom">
+    <div class="col-xl-6">
+        <div class="subheader">Blues</div>
+        <div class="swatch swatch--ltblue"></div>
+        <div class="swatch swatch--statusblue"></div>
+        <div class="swatch swatch--ciscoblue"></div>
+        <div class="swatch swatch--vibblue"></div>
+        <div class="swatch swatch--ciscoindigo"></div>
+    </div>
+    <div class="col-xl-6">
+        <div class="subheader">Accents</div>
+        <div class="swatch swatch--ciscogreen"></div>
+        <div class="swatch swatch--accentorange"></div>
+        <div class="swatch swatch--accentred"></div>
+    </div>
+</div>
+<div class="row base-margin-bottom">
+    <div class="col-xl-6">
+        <div class="subheader">Light Grays</div>
+        <div class="swatch swatch--litegray5"></div>
+        <div class="swatch swatch--litegray3"></div>
+        <div class="swatch swatch--litegray2"></div>
+        <div class="swatch swatch--medgray2"></div>
+        <div class="swatch swatch--medgray4"></div>
+    </div>
+    <div class="col-xl-6">
+        <div class="subheader">Dark Grays</div>
+        <div class="swatch swatch--darkgray4"></div>
+        <div class="swatch swatch--darkgray3"></div>
+        <div class="swatch swatch--darkgray2"></div>
+        <div class="swatch swatch--darkgray1"></div>
+    </div>
+</div>
+<div class="base-margin-bottom">
+    <div class="subheader">Status</div>
+    <div class="swatch swatch--statusturq"></div>
+    <div class="swatch swatch--statusgreen"></div>
+    <div class="swatch swatch--statusyellow"></div>
+    <div class="swatch swatch--statusorange"></div>
+    <div class="swatch swatch--statusred"></div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row base-margin-bottom&quot;&gt;
+    &lt;div class=&quot;col-xl-6&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;Blues&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--ltblue&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--statusblue&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--ciscoblue&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--vibblue&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--ciscoindigo&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xl-6&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;Accents&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--ciscogreen&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--accentorange&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--accentred&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row base-margin-bottom&quot;&gt;
+    &lt;div class=&quot;col-xl-6&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;Light Grays&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--litegray5&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--litegray3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--litegray2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--medgray2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--medgray4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xl-6&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;Dark Grays&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--darkgray4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--darkgray3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--darkgray2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;swatch swatch--darkgray1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;base-margin-bottom&quot;&gt;
+    &lt;div class=&quot;subheader&quot;&gt;Status&lt;/div&gt;
+    &lt;div class=&quot;swatch swatch--statusturq&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swatch swatch--statusgreen&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swatch swatch--statusyellow&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swatch swatch--statusorange&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swatch swatch--statusred&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                </div>
+            </main>
+        </div>
+        <div id="modal-backdrop" class="modal-backdrop hide"></div>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

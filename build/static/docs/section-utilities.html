@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en" id="styleguide">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Cisco UI Kit</title>
+
+        <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="assets/css/cui-styleguide.min.css">
+        <link rel="stylesheet" href="public/css/featherlight.min.css">
+        <link rel="stylesheet" href="public/js/highlight/styles/atom-one-light.css">
+        <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="public/js/styleguide.js"></script>
+        <script src="public/js/jquery-scrollto.js"></script>
+        <script src="public/js/clipboard.js"></script>
+        <script src="public/js/featherlight.min.js"></script>
+        <script src="public/js/Markdown.Converter.js"></script>
+        <script src="public/js/highlight/highlight.pack.js"></script>
+    </head>
+    <body class="cui cui--animated cui--headermargins cui--wide styleguide">
+        <div class="content-fluid">
+            <nav id="styleguideSidebar" class="sidebar sidebar--mini sidebar--indigo" role="navigation">
+                <div class="sidebar__header">
+                    <a id="sidebar-toggle" class="sidebar-toggle hidden-xs hidden-sm">
+                        <span class="icon-toggle-menu"></span>
+                    </a>
+                    <div class="sidebar__header-title">Cisco UI Kit</div>
+                </div>
+                <ul id="rootSidebar" data-kss-ref="Utilities">
+                    <li class="sidebar__item" id="section-gettingStarted">
+                        <a onclick="doNav('./index.html')" title="Getting Started">
+                            <span class="icon-home"></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Resources">
+                            <span class="icon-tools"></span>
+                            <span>Resources</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=f440dc5c-b623-4fdb-b5da-a455c5a1ac58" target="_blank">UI Kit Home Page</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/Wa4b9a3b71b87_4b16_88f1_7f66e71f0276/page/The%20UI%20Kit%20(Atlantic)%20-%20FAQs" target="_blank">UI Kit FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="For Designers">
+                            <span class="icon-draw"></span>
+                            <span>Files</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="public/documents/sketch/CiscoUI-Icons.sketch" download="public/documents/sketch/CiscoUI-Icons.sketch">Icons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/button.sketch" download="public/documents/sketch/button.sketch">Buttons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/checkbox.sketch" download="public/documents/sketch/checkbox.sketch">Checkboxes (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/radio.sketch" download="public/documents/sketch/radio.sketch">Radios (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/switch.sketch" download="public/documents/sketch/switch.sketch">Switches (Sketch)</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Older Versions">
+                            <span class="icon-history"></span>
+                            <span>Versions</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.3-official/" target="_blank">Version 1.3.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.2-official/" target="_blank">Version 1.3.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.2-official/" target="_blank">Version 1.2.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.0-official/" target="_blank">Version 1.2.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.1.0-official/" target="_blank">Version 1.1.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.5-official/" target="_blank">Version 1.0.5</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.1-official/" target="_blank">Version 1.0.1</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.0-official/" target="_blank">Version 1.0.0</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Examples">
+                            <span class="icon-applications"></span>
+                            <span>Examples</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item">
+                                <a href="assets/basic.html">Basic Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/list.html">List Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/standard.html">Standard Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/sidebar.html">Sidebar Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/wide.html">Wide Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/collage.html">Collage</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="rootDrawer" class="sidebar__drawer">
+                        <a tabindex="0" title="Pattern Library">
+                            <span class="icon-plugin"></span>
+                            <span>Patterns</span>
+
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="index.html">Home</a></li>
+                            <li class="sidebar__item"><a href="section-design.html#design-typography">Design</a></li>
+                            <li class="sidebar__item"><a href="section-primitives.html#primitives-blockquote">Primitives</a></li>
+                            <li class="sidebar__item"><a href="section-components.html#components-alert">Components</a></li>
+                            <li class="sidebar__item"><a href="section-layout.html#layout-footer">Layout</a></li>
+                            <li class="sidebar__item"><a href="section-utilities.html#utilities-helpers">Utilities</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <header id="styleguideHeader" class="header header--compressed">
+                    <div class="header-bar flex-center-sm container-fluid">
+                        <a id="mobile-sidebar-toggle" class="sidebar-toggle visible-xs visible-sm base-margin-right">
+                            <span class="icon-list-menu"></span>
+                        </a>
+                        <a class="header-bar__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <div class="header-bar__main hidden-xs hidden-sm">
+                            <div class="header-heading">
+                                <h1 class="page-title">Cisco UI Kit</h1>
+                            </div>
+                        </div>
+                        <div class="header-toolbar hidden-xs hidden-sm hidden-md">
+
+                            <div>
+                                <a href="index.html">Home</a>
+                                <a href="section-design.html#design-typography" class="base-margin-left">Design</a>
+                                <a href="section-primitives.html#primitives-blockquote" class="base-margin-left">Primitives</a>
+                                <a href="section-components.html#components-alert" class="base-margin-left">Components</a>
+                                <a href="section-layout.html#layout-footer" class="base-margin-left">Layout</a>
+                                <a href="section-utilities.html#utilities-helpers" class="base-margin-left">Utilities</a>
+
+                                <div class="dropdown dropdown--left dropdown--tail base-margin-left">
+                                    <a>Globals</a>
+                                    <div class="dropdown__menu">
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-animation" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Animations</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-headermargins" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Header Margins</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-spacing" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Compression</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-wide" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Wide View</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-sticky" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Sticky Header/Footer</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="content content--alt">
+
+
+                    <div id="utilities" class="hide">
+                        <a class="link invisible" href="#utilities">
+                            <span class="icon-link"></span>
+                        </a>
+                    </div>
+
+ 
+                    <div id="utilities-section">
+                        <div class="container-fluid">
+                            <div class="section">
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-3 col-xl-2">
+                                        <div class="panel panel--bordered-bottom panel--bordered-right panel--loose half-padding-left">
+                                            <h4 class="text-uppercase no-margin">Utilities</h4>
+                                        </div>
+                                        <ul id="styleguideTabs" class="tabs tabs--vertical">
+                                            <li class="tab" id="styleguideTabs-Globals"><a onclick="updateUrl('utilities-globals')" tabindex="0"><div class="tab__heading" title="Globals">Globals</div></a></li><li class="tab" id="styleguideTabs-Helpers"><a onclick="updateUrl('utilities-helpers')" tabindex="0"><div class="tab__heading" title="Helpers">Helpers</div></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-8 col-lg-9 col-xl-10">
+                                        <div id="styleguideTabs-content" class="tab-content">
+                    
+
+
+
+
+
+
+
+
+
+
+                                            <div id="styleguideTabs-Globals-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">globals</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Global Modifiers</h3>
+
+
+
+                                                <div><blockquote>Global modifiers you add to your body tag to modify behavior or spacing globally.</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="responsive-table">
+    <table class="table table--loose">
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cui--animated</td>
+                <td>Toggles global animation on across all patterns</td>
+            </tr>
+            <tr>
+                <td>cui--compressed</td>
+                <td>Toggles compressed view on. Useful for data dense applications. Enables the 'compressed' spacing on all supported patterns.</td>
+            </tr>
+            <tr>
+                <td>cui--headerMargins</td>
+                <td>Toggles h1-h6 header margins (margin bottom). By default, header elements have no margins.</td>
+            </tr>
+            <tr>
+                <td>cui--wide</td>
+                <td>Toggles a wide container page bed (1600px). By default, the page bed is 1440px.</td>
+            </tr>
+            <tr>
+                <td>cui--sticky</td>
+                <td>Toggles whether the header and footer are sticky (affixed to top and bottom of page). By default sticky is disabled.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;responsive-table&quot;&gt;
+    &lt;table class=&quot;table table--loose&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Class&lt;/th&gt;
+                &lt;th&gt;Description&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;cui--animated&lt;/td&gt;
+                &lt;td&gt;Toggles global animation on across all patterns&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;cui--compressed&lt;/td&gt;
+                &lt;td&gt;Toggles compressed view on. Useful for data dense applications. Enables the &#x27;compressed&#x27; spacing on all supported patterns.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;cui--headerMargins&lt;/td&gt;
+                &lt;td&gt;Toggles h1-h6 header margins (margin bottom). By default, header elements have no margins.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;cui--wide&lt;/td&gt;
+                &lt;td&gt;Toggles a wide container page bed (1600px). By default, the page bed is 1440px.&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;cui--sticky&lt;/td&gt;
+                &lt;td&gt;Toggles whether the header and footer are sticky (affixed to top and bottom of page). By default sticky is disabled.&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                </div>
+
+
+                                            <div id="styleguideTabs-Helpers-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">helpers</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Text Helpers</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="subheader">Colors</div>
+<div class="responsive-table">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>text-info</td>
+                <td class="text-info">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-success</td>
+                <td class="text-success">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-danger</td>
+                <td class="text-danger">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-warning</td>
+                <td class="text-warning">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-warning-alt</td>
+                <td class="text-warning-alt">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-primary</td>
+                <td class="text-primary">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-secondary</td>
+                <td class="text-secondary">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-default</td>
+                <td class="text-default">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-turquoise</td>
+                <td class="text-turquoise">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-blue</td>
+                <td class="text-blue">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-dkgray-1</td>
+                <td class="text-dkgray-1">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-dkgray-4</td>
+                <td class="text-dkgray-4">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-indigo</td>
+                <td class="text-indigo">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-vibrant</td>
+                <td class="text-vibrant">Lorem ipsum dolor sit amet</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="subheader base-margin-top">Position</div>
+<div class="responsive-table">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>text-left</td>
+                <td class="text-left">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-center</td>
+                <td class="text-center">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-right</td>
+                <td class="text-right">Lorem ipsum dolor sit amet</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="subheader base-margin-top">Transforms</div>
+<div class="responsive-table">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>text-bold</td>
+                <td class="text-bold">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-muted</td>
+                <td class="text-muted">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-lowercase</td>
+                <td class="text-lowercase">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-uppercase</td>
+                <td class="text-uppercase">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-capitalize</td>
+                <td class="text-capitalize">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-italic</td>
+                <td class="text-italic">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-monospace</td>
+                <td class="text-monospace">Lorem ipsum dolor sit amet</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="subheader base-margin-top">Size</div>
+<div class="responsive-table">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>text-tiny</td>
+                <td class="text-tiny">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-xsmall</td>
+                <td class="text-xsmall">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-small</td>
+                <td class="text-small">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-medium</td>
+                <td class="text-medium">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-large</td>
+                <td class="text-large">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-xlarge</td>
+                <td class="text-xlarge">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td>text-huge</td>
+                <td class="text-huge">Lorem ipsum dolor sit amet</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;subheader&quot;&gt;Colors&lt;/div&gt;
+&lt;div class=&quot;responsive-table&quot;&gt;
+    &lt;table class=&quot;table&quot;&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-info&lt;/td&gt;
+                &lt;td class=&quot;text-info&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-success&lt;/td&gt;
+                &lt;td class=&quot;text-success&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-danger&lt;/td&gt;
+                &lt;td class=&quot;text-danger&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-warning&lt;/td&gt;
+                &lt;td class=&quot;text-warning&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-warning-alt&lt;/td&gt;
+                &lt;td class=&quot;text-warning-alt&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-primary&lt;/td&gt;
+                &lt;td class=&quot;text-primary&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-secondary&lt;/td&gt;
+                &lt;td class=&quot;text-secondary&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-default&lt;/td&gt;
+                &lt;td class=&quot;text-default&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-turquoise&lt;/td&gt;
+                &lt;td class=&quot;text-turquoise&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-blue&lt;/td&gt;
+                &lt;td class=&quot;text-blue&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-dkgray-1&lt;/td&gt;
+                &lt;td class=&quot;text-dkgray-1&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-dkgray-4&lt;/td&gt;
+                &lt;td class=&quot;text-dkgray-4&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-indigo&lt;/td&gt;
+                &lt;td class=&quot;text-indigo&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-vibrant&lt;/td&gt;
+                &lt;td class=&quot;text-vibrant&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;subheader base-margin-top&quot;&gt;Position&lt;/div&gt;
+&lt;div class=&quot;responsive-table&quot;&gt;
+    &lt;table class=&quot;table&quot;&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-left&lt;/td&gt;
+                &lt;td class=&quot;text-left&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-center&lt;/td&gt;
+                &lt;td class=&quot;text-center&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-right&lt;/td&gt;
+                &lt;td class=&quot;text-right&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;subheader base-margin-top&quot;&gt;Transforms&lt;/div&gt;
+&lt;div class=&quot;responsive-table&quot;&gt;
+    &lt;table class=&quot;table&quot;&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-bold&lt;/td&gt;
+                &lt;td class=&quot;text-bold&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-muted&lt;/td&gt;
+                &lt;td class=&quot;text-muted&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-lowercase&lt;/td&gt;
+                &lt;td class=&quot;text-lowercase&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-uppercase&lt;/td&gt;
+                &lt;td class=&quot;text-uppercase&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-capitalize&lt;/td&gt;
+                &lt;td class=&quot;text-capitalize&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-italic&lt;/td&gt;
+                &lt;td class=&quot;text-italic&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-monospace&lt;/td&gt;
+                &lt;td class=&quot;text-monospace&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;subheader base-margin-top&quot;&gt;Size&lt;/div&gt;
+&lt;div class=&quot;responsive-table&quot;&gt;
+    &lt;table class=&quot;table&quot;&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-tiny&lt;/td&gt;
+                &lt;td class=&quot;text-tiny&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-xsmall&lt;/td&gt;
+                &lt;td class=&quot;text-xsmall&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-small&lt;/td&gt;
+                &lt;td class=&quot;text-small&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-medium&lt;/td&gt;
+                &lt;td class=&quot;text-medium&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-large&lt;/td&gt;
+                &lt;td class=&quot;text-large&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-xlarge&lt;/td&gt;
+                &lt;td class=&quot;text-xlarge&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;text-huge&lt;/td&gt;
+                &lt;td class=&quot;text-huge&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Nudges</h3>
+
+
+
+                                                <div><blockquote>Use nudges to add extra margin (or padding) to your elements. Nudges are built off of the base spacing (20px) value so <code>half-margin-left</code> is equivalent to margin left 10px.</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="subheader">Margin Nudges</div>
+<div>no-margin</div>
+<div>no-margin-[top,right,bottom,left]</div>
+<div>qtr-margin-[top,right,bottom,left]</div>
+<div>half-margin-[top,right,bottom,left]</div>
+<div>base-margin-[top,right,bottom,left]</div>
+<div>dbl-margin-[top,right,bottom,left]</div>
+<br>
+<div class="subheader">Padding Nudges</div>
+<div>no-padding</div>
+<div>no-padding-[top,right,bottom,left]</div>
+<div>qtr-padding-[top,right,bottom,left]</div>
+<div>half-padding-[top,right,bottom,left]</div>
+<div>base-padding-[top,right,bottom,left]</div>
+<div>dbl-padding-[top,right,bottom,left]</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;subheader&quot;&gt;Margin Nudges&lt;/div&gt;
+&lt;div&gt;no-margin&lt;/div&gt;
+&lt;div&gt;no-margin-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;qtr-margin-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;half-margin-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;base-margin-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;dbl-margin-[top,right,bottom,left]&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&quot;subheader&quot;&gt;Padding Nudges&lt;/div&gt;
+&lt;div&gt;no-padding&lt;/div&gt;
+&lt;div&gt;no-padding-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;qtr-padding-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;half-padding-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;base-padding-[top,right,bottom,left]&lt;/div&gt;
+&lt;div&gt;dbl-padding-[top,right,bottom,left]&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Disabled</h3>
+
+
+
+                                                <div><blockquote>To disable any element, you can add a <code>disabled</code> attribute or the class <code>disabled</code>.</blockquote></div>
+
+                                                <div class="section">
+                                                    <button class="btn btn--small" disabled>Disabled via Attribute</button>
+<button class="btn btn--small disabled">Disabled via Class</button>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;button class=&quot;btn btn--small&quot; disabled&gt;Disabled via Attribute&lt;/button&gt;
+&lt;button class=&quot;btn btn--small disabled&quot;&gt;Disabled via Class&lt;/button&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Blurred</h3>
+
+
+
+                                                <div><blockquote>Add the class <code>.blurred</code> to add a blur effect.</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="panel panel--bordered blurred">Lorem ipsum dolor sit amet Pellentesque commodo fringilla pellentesque. Donec bibendum sem auctor, aliquet odio non, ornare nulla. Vivamus lobortis eros et metus ultricies, eu interdum mi efficitur. Ut et nulla justo. Praesent vulputate mauris mi, ut mollis diam mollis finibus. Donec a orci ex. Praesent dictum sapien massa, lacinia lobortis elit imperdiet eget. Integer maximus erat vestibulum porttitor sodales. Donec accumsan nisl a sagittis hendrerit. Maecenas rhoncus cursus rutrum. Donec congue ipsum eget lacus sagittis, vel pellentesque arcu condimentum. Praesent vel laoreet dui, at mattis elit. In hac habitasse platea dictumst.</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;panel panel--bordered blurred&quot;&gt;Lorem ipsum dolor sit amet Pellentesque commodo fringilla pellentesque. Donec bibendum sem auctor, aliquet odio non, ornare nulla. Vivamus lobortis eros et metus ultricies, eu interdum mi efficitur. Ut et nulla justo. Praesent vulputate mauris mi, ut mollis diam mollis finibus. Donec a orci ex. Praesent dictum sapien massa, lacinia lobortis elit imperdiet eget. Integer maximus erat vestibulum porttitor sodales. Donec accumsan nisl a sagittis hendrerit. Maecenas rhoncus cursus rutrum. Donec congue ipsum eget lacus sagittis, vel pellentesque arcu condimentum. Praesent vel laoreet dui, at mattis elit. In hac habitasse platea dictumst.&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Float Helpers</h3>
+
+
+
+                                                <div><blockquote>Use the class <code>pull-left</code> or <code>pull-right</code> to float elements.</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="clearfix">
+    <div class="panel panel--bordered pull-left">pull-left</div>
+    <div class="panel panel--bordered pull-right">pull-right</div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;clearfix&quot;&gt;
+    &lt;div class=&quot;panel panel--bordered pull-left&quot;&gt;pull-left&lt;/div&gt;
+    &lt;div class=&quot;panel panel--bordered pull-right&quot;&gt;pull-right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Opacity Helpers</h3>
+
+
+
+                                                <div><blockquote>Set the opacity of any element using these helper classes.</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="row">
+    <div class="col-md-1">
+        <div class="subheader">10%</div>
+        <span class="icon-acessibility icon-medium opacity-10"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">20%</div>
+        <span class="icon-acessibility icon-medium opacity-20"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">30%</div>
+        <span class="icon-acessibility icon-medium opacity-30"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">40%</div>
+        <span class="icon-acessibility icon-medium opacity-40"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">50%</div>
+        <span class="icon-acessibility icon-medium opacity-50"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">60%</div>
+        <span class="icon-acessibility icon-medium opacity-60"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">70%</div>
+        <span class="icon-acessibility icon-medium opacity-70"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">80%</div>
+        <span class="icon-acessibility icon-medium opacity-80"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">90%</div>
+        <span class="icon-acessibility icon-medium opacity-90"></span>
+    </div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;10%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-10&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;20%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-20&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;30%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-30&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;40%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-40&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;50%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-50&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;60%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-60&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;70%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-70&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;80%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-80&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;90%&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium opacity-90&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Rotate Helpers</h3>
+
+
+
+                                                <div><blockquote>Rotate any element using these helper classes.</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="row">
+    <div class="col-md-1">
+        <div class="subheader">30&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-30"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">45&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-45"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">60&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-60"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">90&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-90"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">135&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-135"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">180&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-180"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">225&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-225"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">270&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-270"></span>
+    </div>
+    <div class="col-md-1">
+        <div class="subheader">315&deg;</div>
+        <span class="icon-acessibility icon-medium rotate-315"></span>
+    </div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;30&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-30&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;45&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-45&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;60&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-60&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;90&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-90&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;135&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-135&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;180&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-180&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;225&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-225&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;270&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-270&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-1&quot;&gt;
+        &lt;div class=&quot;subheader&quot;&gt;315&amp;deg;&lt;/div&gt;
+        &lt;span class=&quot;icon-acessibility icon-medium rotate-315&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Flex Helpers</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="subheader">flex-fluid</div>
+<div class="flex">
+    <div class="panel panel--bordered">Fills only what is needed</div>
+    <div class="flex-fluid">
+        <div class="panel panel--ltgray">Fills rest of horizontal space</div>
+    </div>
+</div>
+<div class="subheader base-margin-top">flex-center-horizontal</div>
+<div class="flex-center-horizontal">
+    <label class="checkbox">
+        <input type="checkbox">
+        <span class="checkbox__input"></span>
+        <span class="checkbox__label">Click me</span>
+    </label>
+    <button class="btn btn--primary half-margin-left">Click me</button>
+    <div class="half-margin-left">Centered horizontal</div>
+</div>
+<div class="subheader base-margin-top">flex-center-vertical</div>
+<div class="flex-center-vertical">
+    <label class="checkbox">
+        <input type="checkbox">
+        <span class="checkbox__input"></span>
+        <span class="checkbox__label">Click me</span>
+    </label>
+    <button class="btn btn--primary half-margin-left">Click me</button>
+    <div class="half-margin-left">Centered vertical</div>
+</div>
+<div class="subheader base-margin-top">flex-center</div>
+<div class="flex-center">
+    <label class="checkbox">
+        <input type="checkbox">
+        <span class="checkbox__input"></span>
+        <span class="checkbox__label">Click me</span>
+    </label>
+    <button class="btn btn--primary half-margin-left">Click me</button>
+    <div class="half-margin-left">Centered vertical and horizontal</div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;subheader&quot;&gt;flex-fluid&lt;/div&gt;
+&lt;div class=&quot;flex&quot;&gt;
+    &lt;div class=&quot;panel panel--bordered&quot;&gt;Fills only what is needed&lt;/div&gt;
+    &lt;div class=&quot;flex-fluid&quot;&gt;
+        &lt;div class=&quot;panel panel--ltgray&quot;&gt;Fills rest of horizontal space&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;subheader base-margin-top&quot;&gt;flex-center-horizontal&lt;/div&gt;
+&lt;div class=&quot;flex-center-horizontal&quot;&gt;
+    &lt;label class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;span class=&quot;checkbox__input&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;checkbox__label&quot;&gt;Click me&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;button class=&quot;btn btn--primary half-margin-left&quot;&gt;Click me&lt;/button&gt;
+    &lt;div class=&quot;half-margin-left&quot;&gt;Centered horizontal&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;subheader base-margin-top&quot;&gt;flex-center-vertical&lt;/div&gt;
+&lt;div class=&quot;flex-center-vertical&quot;&gt;
+    &lt;label class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;span class=&quot;checkbox__input&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;checkbox__label&quot;&gt;Click me&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;button class=&quot;btn btn--primary half-margin-left&quot;&gt;Click me&lt;/button&gt;
+    &lt;div class=&quot;half-margin-left&quot;&gt;Centered vertical&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;subheader base-margin-top&quot;&gt;flex-center&lt;/div&gt;
+&lt;div class=&quot;flex-center&quot;&gt;
+    &lt;label class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;span class=&quot;checkbox__input&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;checkbox__label&quot;&gt;Click me&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;button class=&quot;btn btn--primary half-margin-left&quot;&gt;Click me&lt;/button&gt;
+    &lt;div class=&quot;half-margin-left&quot;&gt;Centered vertical and horizontal&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+                </div>
+            </main>
+        </div>
+        <div id="modal-backdrop" class="modal-backdrop hide"></div>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

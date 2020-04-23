@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en" id="styleguide">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Cisco UI Kit</title>
+
+        <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="assets/css/cui-styleguide.min.css">
+        <link rel="stylesheet" href="public/css/featherlight.min.css">
+        <link rel="stylesheet" href="public/js/highlight/styles/atom-one-light.css">
+        <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="public/js/styleguide.js"></script>
+        <script src="public/js/jquery-scrollto.js"></script>
+        <script src="public/js/clipboard.js"></script>
+        <script src="public/js/featherlight.min.js"></script>
+        <script src="public/js/Markdown.Converter.js"></script>
+        <script src="public/js/highlight/highlight.pack.js"></script>
+    </head>
+    <body class="cui cui--animated cui--headermargins cui--wide styleguide">
+        <div class="content-fluid">
+            <nav id="styleguideSidebar" class="sidebar sidebar--mini sidebar--indigo" role="navigation">
+                <div class="sidebar__header">
+                    <a id="sidebar-toggle" class="sidebar-toggle hidden-xs hidden-sm">
+                        <span class="icon-toggle-menu"></span>
+                    </a>
+                    <div class="sidebar__header-title">Cisco UI Kit</div>
+                </div>
+                <ul id="rootSidebar" data-kss-ref="Layout">
+                    <li class="sidebar__item" id="section-gettingStarted">
+                        <a onclick="doNav('./index.html')" title="Getting Started">
+                            <span class="icon-home"></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Resources">
+                            <span class="icon-tools"></span>
+                            <span>Resources</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://bx.cisco.com/cbx-portal/" target="_blank">Cisco Brand Exchange</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=f440dc5c-b623-4fdb-b5da-a455c5a1ac58" target="_blank">UI Kit Home Page</a></li>
+                            <li class="sidebar__item"><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/Wa4b9a3b71b87_4b16_88f1_7f66e71f0276/page/The%20UI%20Kit%20(Atlantic)%20-%20FAQs" target="_blank">UI Kit FAQ</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-1" target="_blank">Angular 1.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-angular-4" target="_blank">Angular 4.x Components</a></li>
+                            <li class="sidebar__item"><a href="https://wwwin-gitlab-sjc.cisco.com/cisco-ui-react" target="_blank">React Components</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="For Designers">
+                            <span class="icon-draw"></span>
+                            <span>Files</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="public/documents/sketch/CiscoUI-Icons.sketch" download="public/documents/sketch/CiscoUI-Icons.sketch">Icons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/button.sketch" download="public/documents/sketch/button.sketch">Buttons (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/checkbox.sketch" download="public/documents/sketch/checkbox.sketch">Checkboxes (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/radio.sketch" download="public/documents/sketch/radio.sketch">Radios (Sketch)</a></li>
+                            <li class="sidebar__item"><a href="public/documents/sketch/switch.sketch" download="public/documents/sketch/switch.sketch">Switches (Sketch)</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Older Versions">
+                            <span class="icon-history"></span>
+                            <span>Versions</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.3-official/" target="_blank">Version 1.3.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.3.2-official/" target="_blank">Version 1.3.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.2-official/" target="_blank">Version 1.2.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.2.0-official/" target="_blank">Version 1.2.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.1.0-official/" target="_blank">Version 1.1.0</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.5-official/" target="_blank">Version 1.0.5</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.4-official/" target="_blank">Version 1.0.4</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.3-official/" target="_blank">Version 1.0.3</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.2-official/" target="_blank">Version 1.0.2</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.1-official/" target="_blank">Version 1.0.1</a></li>
+                            <li class="sidebar__item"><a href="http://swtg-rtp-dev-7/styleguide-dist/1.0.0-official/" target="_blank">Version 1.0.0</a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__drawer">
+                        <a tabindex="0" title="Examples">
+                            <span class="icon-applications"></span>
+                            <span>Examples</span>
+                        </a>
+                        <ul>
+                            <li class="sidebar__item">
+                                <a href="assets/basic.html">Basic Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/list.html">List Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/standard.html">Standard Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/sidebar.html">Sidebar Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/wide.html">Wide Page Template</a>
+                            </li>
+                            <li class="sidebar__item">
+                                <a href="assets/collage.html">Collage</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="rootDrawer" class="sidebar__drawer">
+                        <a tabindex="0" title="Pattern Library">
+                            <span class="icon-plugin"></span>
+                            <span>Patterns</span>
+
+                        </a>
+                        <ul>
+                            <li class="sidebar__item"><a href="index.html">Home</a></li>
+                            <li class="sidebar__item"><a href="section-design.html#design-typography">Design</a></li>
+                            <li class="sidebar__item"><a href="section-primitives.html#primitives-blockquote">Primitives</a></li>
+                            <li class="sidebar__item"><a href="section-components.html#components-alert">Components</a></li>
+                            <li class="sidebar__item"><a href="section-layout.html#layout-footer">Layout</a></li>
+                            <li class="sidebar__item"><a href="section-utilities.html#utilities-helpers">Utilities</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <header id="styleguideHeader" class="header header--compressed">
+                    <div class="header-bar flex-center-sm container-fluid">
+                        <a id="mobile-sidebar-toggle" class="sidebar-toggle visible-xs visible-sm base-margin-right">
+                            <span class="icon-list-menu"></span>
+                        </a>
+                        <a class="header-bar__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <div class="header-bar__main hidden-xs hidden-sm">
+                            <div class="header-heading">
+                                <h1 class="page-title">Cisco UI Kit</h1>
+                            </div>
+                        </div>
+                        <div class="header-toolbar hidden-xs hidden-sm hidden-md">
+
+                            <div>
+                                <a href="index.html">Home</a>
+                                <a href="section-design.html#design-typography" class="base-margin-left">Design</a>
+                                <a href="section-primitives.html#primitives-blockquote" class="base-margin-left">Primitives</a>
+                                <a href="section-components.html#components-alert" class="base-margin-left">Components</a>
+                                <a href="section-layout.html#layout-footer" class="base-margin-left">Layout</a>
+                                <a href="section-utilities.html#utilities-helpers" class="base-margin-left">Utilities</a>
+
+                                <div class="dropdown dropdown--left dropdown--tail base-margin-left">
+                                    <a>Globals</a>
+                                    <div class="dropdown__menu">
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-animation" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Animations</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-headermargins" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Header Margins</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-spacing" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Compression</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-wide" type="checkbox" checked>
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Wide View</span>
+                                        </a>
+                                        <a>
+                                            <label class="checkbox">
+                                                <input id="global-sticky" type="checkbox">
+                                                <span class="checkbox__input"></span>
+                                            </label>
+                                            <span>Sticky Header/Footer</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="content content--alt">
+
+
+                    <div id="layout" class="hide">
+                        <a class="link invisible" href="#layout">
+                            <span class="icon-link"></span>
+                        </a>
+                    </div>
+
+ 
+                    <div id="layout-section">
+                        <div class="container-fluid">
+                            <div class="section">
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-3 col-xl-2">
+                                        <div class="panel panel--bordered-bottom panel--bordered-right panel--loose half-padding-left">
+                                            <h4 class="text-uppercase no-margin">Layout</h4>
+                                        </div>
+                                        <ul id="styleguideTabs" class="tabs tabs--vertical">
+                                            <li class="tab" id="styleguideTabs-Footer"><a onclick="updateUrl('layout-footer')" tabindex="0"><div class="tab__heading" title="Footer">Footer</div></a></li><li class="tab" id="styleguideTabs-Grid"><a onclick="updateUrl('layout-grid')" tabindex="0"><div class="tab__heading" title="Grid">Grid</div></a></li><li class="tab" id="styleguideTabs-Header"><a onclick="updateUrl('layout-header')" tabindex="0"><div class="tab__heading" title="Header">Header</div></a></li><li class="tab" id="styleguideTabs-Sidebar"><a onclick="updateUrl('layout-sidebar')" tabindex="0"><div class="tab__heading" title="Sidebar">Sidebar</div></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-8 col-lg-9 col-xl-10">
+                                        <div id="styleguideTabs-content" class="tab-content">
+                    
+
+
+
+
+
+
+
+
+
+
+                                            <div id="styleguideTabs-Footer-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">footer</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Default</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <footer class="footer">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+    <div class="footer__legal">
+        <div class="footer__logo">
+            <a href="http://www.cisco.com" target="_blank">
+                <span class="icon-cisco"></span>
+            </a>
+        </div>
+        <div class="footer__copyright">
+            <div>Copyright &copy; 2019 Cisco Systems Inc.</div>
+            <div>All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;footer class=&quot;footer&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/help.html&quot; target=&quot;_blank&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/terms-conditions.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/trademarks.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer__legal&quot;&gt;
+        &lt;div class=&quot;footer__logo&quot;&gt;
+            &lt;a href=&quot;http://www.cisco.com&quot; target=&quot;_blank&quot;&gt;
+                &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;footer__copyright&quot;&gt;
+            &lt;div&gt;Copyright &amp;copy; 2019 Cisco Systems Inc.&lt;/div&gt;
+            &lt;div&gt;All rights reserved.&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Basic</h3>
+
+
+
+                                                <div><blockquote>The links in this footer are the minimum required by Cisco legal.</blockquote></div>
+
+                                                <div class="section">
+                                                    <footer class="footer footer--basic">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;footer class=&quot;footer footer--basic&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/help.html&quot; target=&quot;_blank&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/terms-conditions.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/trademarks.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Spacing</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <p>COMPRESSED</p>
+<footer class="footer footer--basic footer--compressed">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+<p>DEFAULT</p>
+<footer class="footer footer--basic">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+<p>LOOSE</p>
+<footer class="footer footer--basic footer--loose">
+    <div class="footer__links">
+        <ul class="list">
+            <li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+            <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/help.html" target="_blank">Help</a></li>
+            <li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html" target="_blank">Privacy Statement</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies" target="_blank">Cookie Policy</a></li>
+            <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html" target="_blank">Trademarks</a></li>
+        </ul>
+    </div>
+</footer>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;p&gt;COMPRESSED&lt;/p&gt;
+&lt;footer class=&quot;footer footer--basic footer--compressed&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/help.html&quot; target=&quot;_blank&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/terms-conditions.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/trademarks.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;p&gt;DEFAULT&lt;/p&gt;
+&lt;footer class=&quot;footer footer--basic&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/help.html&quot; target=&quot;_blank&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/terms-conditions.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/trademarks.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;p&gt;LOOSE&lt;/p&gt;
+&lt;footer class=&quot;footer footer--basic footer--loose&quot;&gt;
+    &lt;div class=&quot;footer__links&quot;&gt;
+        &lt;ul class=&quot;list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/cisco/web/siteassets/contacts/index.html&quot; target=&quot;_blank&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ&quot; target=&quot;_blank&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/help.html&quot; target=&quot;_blank&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.cisco.com/c/en/us/about/sitemap.html&quot; target=&quot;_blank&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/terms-conditions.html&quot; target=&quot;_blank&quot;&gt;Terms &amp; Conditions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html&quot; target=&quot;_blank&quot;&gt;Privacy Statement&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies&quot; target=&quot;_blank&quot;&gt;Cookie Policy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/about/legal/trademarks.html&quot; target=&quot;_blank&quot;&gt;Trademarks&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                </div>
+
+
+                                            <div id="styleguideTabs-Grid-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">grid</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Info</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="row">
+    <div class="col-md-3">
+        <div class="panel">
+            <img src="public/img/CiscoUIMainLogo-2.png">
+        </div>
+    </div>
+    <div class="col-md-9">
+        <h4 class="base-margin-top">Built With Bootstrap 4</h4>
+        <p class="subtitle">Bootstrap is made to not only look and behave great in the latest desktop browsers, but in tablet and smartphone browsers too. The UI kit makes use of one of Bootstrap's best features - the 12 column responsive mobile-first grid.</p>
+        <div>See <a href="https://getbootstrap.com/docs/4.1/layout/grid/" target="_blank">Bootstrap Grid</a> for more details.</div>
+    </div>
+</div>
+<div class="base-margin-top">
+    <div class="responsive-table">
+        <table class="table table--bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <div>Extra small</div>
+                        <div class="text-normal">Phones (<576px)</div>
+                    </th>
+                    <th>
+                        <div>Small</div>
+                            <div class="text-normal">Phones / Tablets (&#8805;576px)</div>
+                        </th>
+                        <th>
+                            <div>Medium</div>
+                            <div class="text-normal">Tablets / Desktops (&#8805;768px)</div>
+                        </th>
+                        <th>
+                            <div>Large</div>
+                            <div class="text-normal">Desktops (&#8805;992px)</div>
+                        </th>
+                        <th>
+                            <div>XL</div>
+                            <div class="text-normal">&#8805;1200px</div>
+                        </th>
+                        <th>
+                            <div>2XL</div>
+                            <div class="text-normal">&#8805;1440px</div>
+                        </th>
+                        <th>
+                            <div>3XL</div>
+                            <div class="text-normal">&#8805;1600px</div>
+                        </th>
+                        <th>
+                            <div>4xl</div>
+                            <div class="text-normal">&#8805;1840px</div>
+                        </th>
+                        <th>
+                            <div>5xl</div>
+                            <div class="text-normal">&#8805;2100px</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-bold">Grid Behavior</td>
+                        <td>Horizontal at all times</td>
+                        <td colspan="8">Collapsed to start, horizontal above breakpoints</td>
+                    </tr>
+                    <tr>
+                        <td class="text-bold">Class prefix</td>
+                        <td>.col-</td>
+                        <td>.col-sm-</td>
+                        <td>.col-md-</td>
+                        <td>.col-lg-</td>
+                        <td>.col-xl-</td>
+                        <td>.col-2xl-</td>
+                        <td>.col-3xl-</td>
+                        <td>.col-4xl-</td>
+                        <td>.col-5xl-</td>
+                    </tr>
+                    <tr>
+                        <td class="text-bold"># of columns</td>
+                        <td colspan="9">12</td>
+                    </tr>
+                    <tr>
+                        <td class="text-bold">Gutter width</td>
+                        <td colspan="9">20px (10px on each side of a column)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-3&quot;&gt;
+        &lt;div class=&quot;panel&quot;&gt;
+            &lt;img src=&quot;public/img/CiscoUIMainLogo-2.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-9&quot;&gt;
+        &lt;h4 class=&quot;base-margin-top&quot;&gt;Built With Bootstrap 4&lt;/h4&gt;
+        &lt;p class=&quot;subtitle&quot;&gt;Bootstrap is made to not only look and behave great in the latest desktop browsers, but in tablet and smartphone browsers too. The UI kit makes use of one of Bootstrap&#x27;s best features - the 12 column responsive mobile-first grid.&lt;/p&gt;
+        &lt;div&gt;See &lt;a href=&quot;https://getbootstrap.com/docs/4.1/layout/grid/&quot; target=&quot;_blank&quot;&gt;Bootstrap Grid&lt;/a&gt; for more details.&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;base-margin-top&quot;&gt;
+    &lt;div class=&quot;responsive-table&quot;&gt;
+        &lt;table class=&quot;table table--bordered&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;&lt;/th&gt;
+                    &lt;th&gt;
+                        &lt;div&gt;Extra small&lt;/div&gt;
+                        &lt;div class=&quot;text-normal&quot;&gt;Phones (&lt;576px)&lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;th&gt;
+                        &lt;div&gt;Small&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;Phones / Tablets (&amp;#8805;576px)&lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th&gt;
+                            &lt;div&gt;Medium&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;Tablets / Desktops (&amp;#8805;768px)&lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th&gt;
+                            &lt;div&gt;Large&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;Desktops (&amp;#8805;992px)&lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th&gt;
+                            &lt;div&gt;XL&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;&amp;#8805;1200px&lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th&gt;
+                            &lt;div&gt;2XL&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;&amp;#8805;1440px&lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th&gt;
+                            &lt;div&gt;3XL&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;&amp;#8805;1600px&lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th&gt;
+                            &lt;div&gt;4xl&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;&amp;#8805;1840px&lt;/div&gt;
+                        &lt;/th&gt;
+                        &lt;th&gt;
+                            &lt;div&gt;5xl&lt;/div&gt;
+                            &lt;div class=&quot;text-normal&quot;&gt;&amp;#8805;2100px&lt;/div&gt;
+                        &lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td class=&quot;text-bold&quot;&gt;Grid Behavior&lt;/td&gt;
+                        &lt;td&gt;Horizontal at all times&lt;/td&gt;
+                        &lt;td colspan=&quot;8&quot;&gt;Collapsed to start, horizontal above breakpoints&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td class=&quot;text-bold&quot;&gt;Class prefix&lt;/td&gt;
+                        &lt;td&gt;.col-&lt;/td&gt;
+                        &lt;td&gt;.col-sm-&lt;/td&gt;
+                        &lt;td&gt;.col-md-&lt;/td&gt;
+                        &lt;td&gt;.col-lg-&lt;/td&gt;
+                        &lt;td&gt;.col-xl-&lt;/td&gt;
+                        &lt;td&gt;.col-2xl-&lt;/td&gt;
+                        &lt;td&gt;.col-3xl-&lt;/td&gt;
+                        &lt;td&gt;.col-4xl-&lt;/td&gt;
+                        &lt;td&gt;.col-5xl-&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td class=&quot;text-bold&quot;&gt;# of columns&lt;/td&gt;
+                        &lt;td colspan=&quot;9&quot;&gt;12&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td class=&quot;text-bold&quot;&gt;Gutter width&lt;/td&gt;
+                        &lt;td colspan=&quot;9&quot;&gt;20px (10px on each side of a column)&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Advanced Grid</h3>
+
+
+
+                                                <div><blockquote>The advanced grid is a specialized container for cards which provides more control over gutters and element selection. NOTE: This grid is only supported on modern browsers (no IE11 support).</blockquote></div>
+
+                                                <div class="section">
+                                                    <div class="row base-margin-bottom">
+    <div class="col-xl-6 flex-center-vertical">
+        <div class="btn-group btn-group--square">
+            <button id="grid-group" class="btn btn--gray-ghost">3up</button>
+            <button id="grid-group" class="btn btn--gray-ghost">4up</button>
+            <button id="grid-group" class="btn btn--gray-ghost selected">5up</button>
+        </div>
+    </div>
+    <div class="col-xl-6 flex-center-vertical flex-right">
+        <div class="form-group form-group--inline">
+            <label class="switch">
+                <input id="grid-selectable" type="checkbox" checked>
+                <span class="switch__input"></span>
+                <span class="switch__label">Selectable</span>
+            </label>
+        </div>
+        <div class="base-margin-left form-group form-group--inline label--inline">
+            <div class="form-group__text">
+                <input id="grid-cards" type="number" value="15">
+                <label for="grid-cards">Cards</label>
+            </div>
+        </div>
+        <div class="base-margin-left form-group form-group--inline label--inline">
+            <div class="form-group__text">
+                <input id="grid-gutters" type="number" value="10">
+                <label for="grid-gutters">Gutters</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="grid" class="grid grid--selectable grid--5up"></div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row base-margin-bottom&quot;&gt;
+    &lt;div class=&quot;col-xl-6 flex-center-vertical&quot;&gt;
+        &lt;div class=&quot;btn-group btn-group--square&quot;&gt;
+            &lt;button id=&quot;grid-group&quot; class=&quot;btn btn--gray-ghost&quot;&gt;3up&lt;/button&gt;
+            &lt;button id=&quot;grid-group&quot; class=&quot;btn btn--gray-ghost&quot;&gt;4up&lt;/button&gt;
+            &lt;button id=&quot;grid-group&quot; class=&quot;btn btn--gray-ghost selected&quot;&gt;5up&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xl-6 flex-center-vertical flex-right&quot;&gt;
+        &lt;div class=&quot;form-group form-group--inline&quot;&gt;
+            &lt;label class=&quot;switch&quot;&gt;
+                &lt;input id=&quot;grid-selectable&quot; type=&quot;checkbox&quot; checked&gt;
+                &lt;span class=&quot;switch__input&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;switch__label&quot;&gt;Selectable&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;base-margin-left form-group form-group--inline label--inline&quot;&gt;
+            &lt;div class=&quot;form-group__text&quot;&gt;
+                &lt;input id=&quot;grid-cards&quot; type=&quot;number&quot; value=&quot;15&quot;&gt;
+                &lt;label for=&quot;grid-cards&quot;&gt;Cards&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;base-margin-left form-group form-group--inline label--inline&quot;&gt;
+            &lt;div class=&quot;form-group__text&quot;&gt;
+                &lt;input id=&quot;grid-gutters&quot; type=&quot;number&quot; value=&quot;10&quot;&gt;
+                &lt;label for=&quot;grid-gutters&quot;&gt;Gutters&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;grid&quot; class=&quot;grid grid--selectable grid--5up&quot;&gt;&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                </div>
+
+
+                                            <div id="styleguideTabs-Header-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">header</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Default</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header">
+    <div class="header-bar container">
+        <a href="javascript:;" class="btn btn--small btn--icon toggle-menu">
+            <span class="icon-list-menu"></span>
+        </a>
+        <a href="javascript:;" class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li><a href="javascript:;">Operate</a></li>
+                    <li><a href="javascript:;">Devices</a></li>
+                    <li><span>Discovery</span></li>
+                </ul>
+            </div>
+            <div class="header-heading">
+                <h1 class="page-title">Wide Array Extended Network Dashboard</h1>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a href="javascript:;" class="btn btn--icon">
+                <span class="icon-search"></span>
+            </a>
+            <a href="javascript:;" class="btn btn--icon">
+                <span class="icon-alert"></span>
+            </a>
+            <a href="javascript:;" class="btn btn--icon">
+                <span class="icon-cog"></span>
+            </a>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;header class=&quot;header&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--small btn--icon toggle-menu&quot;&gt;
+            &lt;span class=&quot;icon-list-menu&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-breadcrumbs&quot;&gt;
+                &lt;ul class=&quot;breadcrumb&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;Operate&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;Devices&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span&gt;Discovery&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Wide Array Extended Network Dashboard&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-alert&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Minimum</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header">
+    <div class="header-bar container">
+        <a href="javascript:;" class="btn btn--small btn--icon toggle-menu">
+            <span class="icon-list-menu"></span>
+        </a>
+        <a href="javascript:;" class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-heading">
+                <h1 class="page-title">Product Name</h1>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a href="javascript:;" class="btn btn--icon">
+                <span class="icon-search"></span>
+            </a>
+            <a href="javascript:;" class="btn btn--icon">
+                <span class="icon-cog"></span>
+            </a>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;header class=&quot;header&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--small btn--icon toggle-menu&quot;&gt;
+            &lt;span class=&quot;icon-list-menu&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Product Name&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Compressed</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header header--compressed">
+    <div class="header-bar container">
+        <a href="javascript:;" class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-heading">
+                <h1 class="page-title">Devices</h1>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a href="javascript:;" class="btn btn--small btn--icon">
+                <span class="icon-search"></span>
+            </a>
+            <a href="javascript:;" class="btn btn--small btn--icon">
+                <span class="icon-tools"></span>
+            </a>
+            <a href="javascript:;" class="btn btn--icon btn--small btn--negative">
+                <span class="icon-close"></span>
+            </a>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;header class=&quot;header header--compressed&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Devices&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--small btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-tools&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--icon btn--small btn--negative&quot;&gt;
+                &lt;span class=&quot;icon-close&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Everything</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="panel panel--ltgray panel--compressed IGNORE">
+<header class="header header--tall">
+    <div class="header-bar container">
+        <a href="javascript:;" class="btn btn--small btn--icon toggle-menu">
+            <span class="icon-list-menu"></span>
+        </a>
+        <a href="javascript:;" class="header-bar__logo">
+            <span class="icon-cisco"></span>
+        </a>
+        <div class="header-bar__main">
+            <div class="header-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li><a href="javascript:;">Operate</a></li>
+                    <li><a href="javascript:;">Devices</a></li>
+                    <li><span>Discovery</span></li>
+                </ul>
+            </div>
+            <div class="header-heading">
+                <h1 class="page-title">Wide Array Extended Network Dashboard</h1>
+                <div class="header-utilities">
+                    <a href="javascript:;" class="link">
+                        <span class="icon-home"></span>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <span class="icon-star"></span>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <span class="icon-refresh"></span>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <span class="icon-info-circle"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-menus">
+                <ul class="nav nav-tabs">
+                    <li class="tab active">
+                        <a href="javascript:;"><div class="tab__heading" title="Tab 1">Tab 1</div></a>
+                    </li>
+                    <li class="tab">
+                        <a href="javascript:;"><div class="tab__heading" title="Tab 2">Tab 2</div></a>
+                    </li>
+                    <li class="tab">
+                        <a href="javascript:;"><div class="tab__heading" title="Tab 3">Tab 3</div></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-toolbar">
+            <a href="javascript:;" class="avatar">John Doe</a>
+            <button class="btn btn--icon">
+                <span class="icon-search"></span>
+            </button>
+            <button class="btn btn--icon btn--negative">
+                <span class="icon-alert"></span>
+                <span class="btn__subtext">999+</span>
+            </button>
+            <button class="btn btn--icon">
+                <span class="icon-mail"></span>
+                <span class="btn__subtext">34</span>
+            </button>
+            <button class="btn btn--icon">
+                <span class="icon-cog"></span>
+            </button>
+        </div>
+    </div>
+</header>
+</div IGNORE>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;header class=&quot;header header--tall&quot;&gt;
+    &lt;div class=&quot;header-bar container&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn--small btn--icon toggle-menu&quot;&gt;
+            &lt;span class=&quot;icon-list-menu&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;header-bar__logo&quot;&gt;
+            &lt;span class=&quot;icon-cisco&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;header-bar__main&quot;&gt;
+            &lt;div class=&quot;header-breadcrumbs&quot;&gt;
+                &lt;ul class=&quot;breadcrumb&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;Operate&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;Devices&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;span&gt;Discovery&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-heading&quot;&gt;
+                &lt;h1 class=&quot;page-title&quot;&gt;Wide Array Extended Network Dashboard&lt;/h1&gt;
+                &lt;div class=&quot;header-utilities&quot;&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-home&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-star&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-refresh&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;link&quot;&gt;
+                        &lt;span class=&quot;icon-info-circle&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-menus&quot;&gt;
+                &lt;ul class=&quot;nav nav-tabs&quot;&gt;
+                    &lt;li class=&quot;tab active&quot;&gt;
+                        &lt;a href=&quot;javascript:;&quot;&gt;&lt;div class=&quot;tab__heading&quot; title=&quot;Tab 1&quot;&gt;Tab 1&lt;/div&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;tab&quot;&gt;
+                        &lt;a href=&quot;javascript:;&quot;&gt;&lt;div class=&quot;tab__heading&quot; title=&quot;Tab 2&quot;&gt;Tab 2&lt;/div&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;tab&quot;&gt;
+                        &lt;a href=&quot;javascript:;&quot;&gt;&lt;div class=&quot;tab__heading&quot; title=&quot;Tab 3&quot;&gt;Tab 3&lt;/div&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;header-toolbar&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;avatar&quot;&gt;John Doe&lt;/a&gt;
+            &lt;button class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--icon btn--negative&quot;&gt;
+                &lt;span class=&quot;icon-alert&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;btn__subtext&quot;&gt;999+&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-mail&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;btn__subtext&quot;&gt;34&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;btn btn--icon&quot;&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                </div>
+
+
+                                            <div id="styleguideTabs-Sidebar-content" class="tab-pane">
+                                                <div class="flex-center-vertical">
+                                                    <h2 class="display-1 no-margin text-capitalize flex-fluid">sidebar</h2>
+                                                    <div></div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Spacing</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="row">
+    <div class="col-md-3">
+        <nav class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Default</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-md-9">
+        <nav class="sidebar sidebar--compressed">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Compressed</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Dashboard</a></li>
+                        <li class="sidebar__item"><a>Monitor</a></li>
+                        <li class="sidebar__drawer">
+                            <a>Configuration</a>
+                            <ul>
+                                <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                                <li class="sidebar__item"><a>Configuration Guides</a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__drawer">
+                            <a>Inventory</a>
+                            <ul>
+                                <li class="sidebar__item"><a>Routers</a></li>
+                                <li class="sidebar__item"><a>Switches</a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__drawer">
+                            <a>Services</a>
+                            <ul>
+                                <li class="sidebar__item"><a>Network Services</a></li>
+                                <li class="sidebar__item"><a>Mobility Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__item"><a>Reports</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-3&quot;&gt;
+        &lt;nav class=&quot;sidebar&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Default&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-9&quot;&gt;
+        &lt;nav class=&quot;sidebar sidebar--compressed&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Compressed&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                            &lt;a&gt;Configuration&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                            &lt;a&gt;Inventory&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                            &lt;a&gt;Services&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Color</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="row">
+    <div class="col-lg-3">
+        <nav class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Default</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-lg-3">
+        <nav class="sidebar sidebar--ltgray">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Light Gray</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-lg-3">
+        <nav class="sidebar sidebar--dkgray">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Dark Gray</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-lg-3">
+        <nav class="sidebar sidebar--indigo">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Indigo</div>
+            </div>
+            <ul>
+                <li class="sidebar__item"><a>Dashboard</a></li>
+                <li class="sidebar__item"><a>Monitor</a></li>
+                <li class="sidebar__drawer">
+                    <a>Configuration</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Open Device Configuration</a></li>
+                        <li class="sidebar__item"><a>Configuration Guides</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Inventory</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Routers</a></li>
+                        <li class="sidebar__item"><a>Switches</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__drawer">
+                    <a>Services</a>
+                    <ul>
+                        <li class="sidebar__item"><a>Network Services</a></li>
+                        <li class="sidebar__item"><a>Mobility Services</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item"><a>Reports</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-lg-3&quot;&gt;
+        &lt;nav class=&quot;sidebar&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Default&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-lg-3&quot;&gt;
+        &lt;nav class=&quot;sidebar sidebar--ltgray&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Light Gray&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-lg-3&quot;&gt;
+        &lt;nav class=&quot;sidebar sidebar--dkgray&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Dark Gray&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-lg-3&quot;&gt;
+        &lt;nav class=&quot;sidebar sidebar--indigo&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Indigo&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Monitor&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Configuration&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Open Device Configuration&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Configuration Guides&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Inventory&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Routers&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Switches&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer&quot;&gt;
+                    &lt;a&gt;Services&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Network Services&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Mobility Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Reports&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+
+
+
+                                           <div class="base-margin-top dbl-margin-bottom depth-3">
+
+
+                                               <h3 class="display-4">Size</h3>
+
+
+
+
+                                                <div class="section">
+                                                    <div class="row">
+    <div class="col-md-3">
+        <nav class="sidebar">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Default</div>
+            </div>
+            <ul>
+                <li class="sidebar__item selected">
+                    <a>
+                        <span class="icon-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-bell"></span>
+                        <span>Alerts</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-graph"></span>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="sidebar__drawer sidebar__drawer--opened">
+                    <a>
+                        <span class="icon-devices"></span>
+                        <span>Devices</span>
+                    </a>
+                    <ul>
+                        <li class="sidebar__item"><a>Aironet 3500i Access Point</a></li>
+                        <li class="sidebar__item"><a>Cisco Catalyst 3750-24TS</a></li>
+                        <li class="sidebar__item"><a>Cisco 1841 ISR</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-cog"></span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-help"></span>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-md-4">
+        <nav class="sidebar sidebar--mini">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Mini</div>
+            </div>
+            <ul>
+                <li class="sidebar__item selected">
+                    <a>
+                        <span class="icon-home"></span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="badge-wrapper">
+                            <span class="icon-alert icon-medium"></span>
+                            <span class="badge badge--danger">3</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-graph"></span>
+                    </a>
+                </li>
+                <li class="sidebar__drawer sidebar__drawer--opened">
+                    <a>
+                        <span class="icon-devices"></span>
+                    </a>
+                    <ul>
+                        <li class="sidebar__item"><a>Aironet 3500i Access Point</a></li>
+                        <li class="sidebar__item"><a>Cisco Catalyst 3750-24TS</a></li>
+                        <li class="sidebar__item"><a>Cisco 1841 ISR</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-cog"></span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-help"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-md-4">
+        <nav class="sidebar sidebar--mini">
+            <div class="sidebar__header">
+                <div class="sidebar__header-title">Mini</div>
+            </div>
+            <ul>
+                <li class="sidebar__item selected">
+                    <a>
+                        <span class="icon-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-bell"></span>
+                        <span>Alerts</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-graph"></span>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="sidebar__drawer sidebar__drawer--opened">
+                    <a>
+                        <span class="icon-devices"></span>
+                        <span>Devices</span>
+                    </a>
+                    <ul>
+                        <li class="sidebar__item"><a>Aironet 3500i Access Point</a></li>
+                        <li class="sidebar__item"><a>Cisco Catalyst 3750-24TS</a></li>
+                        <li class="sidebar__item"><a>Cisco 1841 ISR</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-cog"></span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a>
+                        <span class="icon-help"></span>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+                                                </div>
+                                                <div class="markup">
+                                                    <a class="markup-toggle link">
+                                                        <span class="markup-label">View code</span>
+                                                        <span class="markup-chevron"></span>
+                                                    </a>
+                                                    <div class="v-separator"></div>
+                                                    <a class="clipboard-toggle link">Copy code</a>
+                                                </div>
+                                                <div class="markup-code panel panel--bordered panel--ltgray panel--well hide qtr-margin-top">
+                                                    <pre><code class="code-raw" data-language="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-3&quot;&gt;
+        &lt;nav class=&quot;sidebar&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Default&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item selected&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-home&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Home&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-bell&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Alerts&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-graph&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Charts&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer sidebar__drawer--opened&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-devices&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Devices&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Aironet 3500i Access Point&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Cisco Catalyst 3750-24TS&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Cisco 1841 ISR&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Settings&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-help&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Help&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;nav class=&quot;sidebar sidebar--mini&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Mini&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item selected&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-home&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;badge-wrapper&quot;&gt;
+                            &lt;span class=&quot;icon-alert icon-medium&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;badge badge--danger&quot;&gt;3&lt;/span&gt;
+                        &lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-graph&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer sidebar__drawer--opened&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-devices&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Aironet 3500i Access Point&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Cisco Catalyst 3750-24TS&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Cisco 1841 ISR&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-help&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;nav class=&quot;sidebar sidebar--mini&quot;&gt;
+            &lt;div class=&quot;sidebar__header&quot;&gt;
+                &lt;div class=&quot;sidebar__header-title&quot;&gt;Mini&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;sidebar__item selected&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-home&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Home&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-bell&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Alerts&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-graph&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Charts&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__drawer sidebar__drawer--opened&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-devices&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Devices&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Aironet 3500i Access Point&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Cisco Catalyst 3750-24TS&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;sidebar__item&quot;&gt;&lt;a&gt;Cisco 1841 ISR&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Settings&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;sidebar__item&quot;&gt;
+                    &lt;a&gt;
+                        &lt;span class=&quot;icon-help&quot;&gt;&lt;/span&gt;
+                        &lt;span&gt;Help&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                </div>
+
+
+                                                </div>
+                                                
+                </div>
+            </main>
+        </div>
+        <div id="modal-backdrop" class="modal-backdrop hide"></div>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
