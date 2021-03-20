@@ -18,7 +18,7 @@ graphviz==0.11
 idna==2.8
 ipaddress==1.0.22
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 jsonpickle==1.2
 jsonschema==3.0.1
 MarkupSafe==1.1.1
